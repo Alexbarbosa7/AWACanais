@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awacanais Play - Minha Coleção Exclusiva</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <header>
+        <h1>🌟 Awacanais Play - Meus Destaques 🌟</h1>
+        <p>Sua coleção pessoal de filmes, séries e vídeos favoritos.</p>
+    </header>
+
+    <div class="main-layout">
+        
+        <div class="video-principal">
+            <h2 id="main-title">Filme Destaque da Semana</h2> 
+            
+            <h4 id="main-channel"></h4> 
+            
+            <div class="video-embed">
+                <iframe name="Player" src="//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%6C%63/player3/ch.php?canal=espn" frameborder="0" height="400" scrolling="no" width="640" allow="encrypted-media" allowFullScreen></iframe>
+            </div>
+            <p id="main-description" class="description">
+                Descrição: O vídeo principal (Episódio 1) que você quer dar destaque. Ele será alterado ao clicar nos itens da direita.
+            </p>
+        </div>
+        
+        <div class="opcoes-videos">
+            <h2>Outras Opções</h2>
+            
+            <div class="content-item small video-item" 
+                 data-link="[LINK DE INCORPORAÇÃO EPISÓDIO 1 AQUI]" 
+                 data-title="Episódio 1: O Início"
+                 data-channel="Nome do Canal Produtor A"
+                 data-desc="O primeiro episódio da série, onde tudo começa.">
+                <h3>Episódio 1: O Início</h3>
+                <h4>Canal Produtor A</h4>
+                </div>
+            
+            <div class="content-item small video-item"
+                 data-link="[LINK DE INCORPORAÇÃO EPISÓDIO 2 AQUI]"
+                 data-title="Episódio 2: A Missão Secreta"
+                 data-channel="Nome do Canal Produtor B"
+                 data-desc="A equipe embarca em uma perigosa missão secreta no planeta Xylos.">
+                <h3>Episódio 2: A Missão Secreta</h3>
+                <h4>Canal Produtor B</h4>
+            </div>
+
+            <div class="content-item small video-item"
+                 data-link="[LINK DE INCORPORAÇÃO EPISÓDIO 3 AQUI]"
+                 data-title="Episódio 3: O Confronto Final"
+                 data-channel="Nome do Canal Produtor A"
+                 data-desc="O ápice da temporada! Prepare-se para o confronto.">
+                <h3>Episódio 3: O Confronto Final</h3>
+                <h4>Canal Produtor A</h4>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+
+    <footer>
+        <p>Feito com ❤️ para os amantes do Awacanais. &copy; 2025.</p>
+    </footer>
+</body>
+</html>
