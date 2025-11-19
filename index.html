@@ -1,75 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awacanais Play - Minha Coleção Exclusiva</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awacanais Play - Minha Coleção Exclusiva</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="css/style.css">  
 </head>
 <body>
-    <header>
-        <h1>🌟 Awacanais Play - Meus Destaques 🌟</h1>
-        <p>Sua coleção pessoal de filmes, séries e vídeos favoritos.</p>
-    </header>
+  <header>
+  <div class="header-content">
+  <h1>🌟 Awacanais Play - Meus Destaques 🌟</h1>
+  <nav>
 
-    <div class="main-layout">
+  </nav>
+  </div>
+  <p>Sua coleção pessoal de filmes, séries e vídeos favoritos.</p>
+  </header>
+
+  <main class="main-layout">
+ 
+  <section class="video-principal">
+  <h2 id="main-title">Filme Destaque da Semana</h2> 
+    <h4 id="main-channel"></h4> 
+  <div class="video-embed">
+  <iframe id="main-player" name="Player" 
+            src="https://redecanaistv.lc/player3/ch.php?canal=espn" 
+            frameborder="0" allow="encrypted-media" allowFullScreen>
+  </iframe>
+  </div>
+  <p id="main-description" class="description">
+  Descrição: O vídeo principal (Episódio 1) que você quer dar destaque. Ele será alterado ao clicar nos itens da direita.
+  </p>
+  </section>
+ 
+  <aside class="opcoes-videos">
+  <h2>Opções de Canais ESPN</h2>
+ 
+    <div class="content-item small video-item"
+        data-link="https://redecanaistv.lc/player3/ch.php?canal=espn"
+        data-title="ESPN"
+        data-channel="O Líder em Esportes"
+        data-desc="Assista a programação completa do canal principal, incluindo       futebol internacional, basquete e mais.">
+      
+     <div class="thumbnail">
+
+          <img src="https://via.placeholder.com/320x180/0000FF/FFFFFF?text=ESPN" alt="Capa ESPN">
         
-        <div class="video-principal">
-            <h2 id="main-title">Filme Destaque da Semana</h2> 
-            
-            <h4 id="main-channel"></h4> 
-            
-            <div class="video-embed">
-                <iframe name="Player" src="//%72%65%64%65%63%61%6E%61%69%73%74%76%2E%6C%63/player3/ch.php?canal=espn" frameborder="0" height="400" scrolling="no" width="640" allow="encrypted-media" allowFullScreen></iframe>
-            </div>
-            <p id="main-description" class="description">
-                Descrição: O vídeo principal (Episódio 1) que você quer dar destaque. Ele será alterado ao clicar nos itens da direita.
-            </p>
-        </div>
-        
-        <div class="opcoes-videos">
-            <h2>Outras Opções</h2>
-            
-            <div class="content-item small video-item" 
-                 data-link="[LINK DE INCORPORAÇÃO EPISÓDIO 1 AQUI]" 
-                 data-title="Episódio 1: O Início"
-                 data-channel="Nome do Canal Produtor A"
-                 data-desc="O primeiro episódio da série, onde tudo começa.">
-                <h3>Episódio 1: O Início</h3>
-                <h4>Canal Produtor A</h4>
-                </div>
-            
-            <div class="content-item small video-item"
-                 data-link="[LINK DE INCORPORAÇÃO EPISÓDIO 2 AQUI]"
-                 data-title="Episódio 2: A Missão Secreta"
-                 data-channel="Nome do Canal Produtor B"
-                 data-desc="A equipe embarca em uma perigosa missão secreta no planeta Xylos.">
-                <h3>Episódio 2: A Missão Secreta</h3>
-                <h4>Canal Produtor B</h4>
-            </div>
+          <span class="play-icon">▶</span>
+      
+      </div>
+     
 
-            <div class="content-item small video-item"
-                 data-link="[LINK DE INCORPORAÇÃO EPISÓDIO 3 AQUI]"
-                 data-title="Episódio 3: O Confronto Final"
-                 data-channel="Nome do Canal Produtor A"
-                 data-desc="O ápice da temporada! Prepare-se para o confronto.">
-                <h3>Episódio 3: O Confronto Final</h3>
-                <h4>Canal Produtor A</h4>
-            </div>
+      <h3>ESPN</h3>
 
-        </div>
+      <h4>O Líder em Esportes</h4>
 
-    </div>
-    
-    <script src="script.js"></script>
+  </div>
+ 
+  <div class="content-item small video-item"
+  data-link="https://redecanaistv.lc/player3/ch.php?canal=espn2"
+  data-title="ESPN 2"
+  data-channel="Foco em Ligas Americanas"
+  data-desc="Cobertura aprofundada da NBA, NFL e dos grandes torneios de tênis.">
+  <div class="thumbnail">
+  <img src="https://via.placeholder.com/320x180/FF0000/FFFFFF?text=ESPN+2" alt="Capa ESPN 2">
+  <span class="play-icon">▶</span>
+  </div>
+  <h3>ESPN 2</h3>
+  <h4>Foco em Ligas Americanas</h4>
+  </div>
 
-    <footer>
-        <p>Feito com ❤️ para os amantes do Awacanais. &copy; 2025.</p>
-    </footer>
+  <div class="content-item small video-item"
+  data-link="https://redecanaistv.lc/player3/ch.php?canal=espn3" data-title="ESPN 3"
+  data-channel="Esportes Globais"
+  data-desc="Transmissões de rugby, golfe, vela e outros esportes globais.">
+  <div class="thumbnail">
+  <img src="https://via.placeholder.com/320x180/00FF00/FFFFFF?text=ESPN+3" alt="Capa ESPN 3">
+  <span class="play-icon">▶</span>
+  </div>
+  <h3>ESPN 3</h3>
+  <h4>Esportes Globais</h4>
+  </div>
+ 
+  <div class="content-item small video-item"
+  data-link="https://redecanaistv.lc/player3/ch.php?canal=espn4" data-title="ESPN 4"
+  data-channel="Futebol Europeu"
+  data-desc="A casa das ligas europeias e copas de futebol, com jogos exclusivos.">
+  <div class="thumbnail">
+  <img src="https://via.placeholder.com/320x180/FF7F00/FFFFFF?text=ESPN+4" alt="Capa ESPN 4">
+  <span class="play-icon">▶</span>
+  </div>
+  <h3>ESPN 4</h3>
+  <h4>Futebol Europeu</h4>
+  </div>
+ 
+ <div class="content-item small video-item"
+  data-link="https://redecanaistv.lc/player3/ch.php?canal=espn5" data-title="ESPN 5"
+  data-channel="Especial de Lutas"
+  data-desc="Cobertura completa de UFC, Boxe e eventos de esportes de combate.">
+  <div class="thumbnail">
+  <img src="https://via.placeholder.com/320x180/8B008B/FFFFFF?text=ESPN+5" alt="Capa ESPN 5">
+  <span class="play-icon">▶</span>
+  </div>
+  <h3>ESPN 5</h3>
+  <h4>Especial de Lutas</h4>
+  </div>
+  <div class="content-item small video-item"
+data-link="https://redecanaistv.lc/player3/ch.php?canal=espn6"data-title="ESPN 6"
+data-channel="Eventos ao Vivo"
+data-desc="Canal dedicado a eventos esportivos que acontecem simultaneamente.">
+  <div class="thumbnail">
+  <img src="https://via.placeholder.com/320x180/00FFFF/FFFFFF?text=ESPN+6" alt="Capa ESPN 6">
+  <span class="play-icon">▶</span>
+  </div>
+  <h3>ESPN 6</h3>
+  <h4>Eventos ao Vivo</h4>
+  </div>
+ 
+  <div class="content-item small video-item"
+  data-link="https://redecanaistv.lc/player3/ch.php?canal=espn7" data-title="ESPN 7"
+  data-channel="Arquivo e Documentários"
+  data-desc="Reprise de jogos clássicos, documentários 30 for 30 e programas especiais.">
+  <div class="thumbnail">
+  <img src="https://via.placeholder.com/320x180/A52A2A/FFFFFF?text=ESPN+7" alt="Capa ESPN 7">
+  <span class="play-icon">▶</span>
+  </div>
+  <h3>ESPN 7</h3>
+  <h4>Arquivo e Documentários</h4>
+  </div>
+ 
+  </aside>
+
+  </main>
+ 
+      <script src="script/script.js"></script>
+
+  <footer>
+  <p>Feito com ❤️ para os amantes do Awacanais. &copy; 2025.</p>
+  </footer>
 </body>
 </html>

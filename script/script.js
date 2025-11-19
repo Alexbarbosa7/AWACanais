@@ -1,62 +1,61 @@
-// Aguarda o carregamento completo do documento antes de executar o script
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Seleciona todos os itens da lista que são clicáveis
-    const videoItems = document.querySelectorAll('.video-item');
-    
-    // 2. Seleciona todos os elementos que serão atualizados
+    // 1. Seleciona os elementos principais
     const mainPlayer = document.getElementById('main-player');
-    const mainTitleElement = document.querySelector('.video-principal h2');
-    const mainChannelElement = document.getElementById('main-channel'); // NOVO ELEMENTO
-    const mainDescriptionElement = document.getElementById('main-description');
+    const mainTitle = document.getElementById('main-title');
+    const mainChannel = document.getElementById('main-channel');
+    const mainDescription = document.getElementById('main-description');
     
-    // Verifica se os elementos principais existem antes de continuar
-    if (!mainPlayer || !mainDescriptionElement || !mainTitleElement || !mainChannelElement) {
-        console.error("Erro: Um ou mais elementos principais (iframe, título, canal ou descrição) não foram encontrados no HTML.");
-        // Removi a tag <h2> e adicionei o ID #main-title para o querySelector funcionar melhor
-        return; 
-    }
+    // 2. Seleciona todos os itens da lista
+    const videoItems = document.querySelectorAll('.opcoes-videos .video-item');
 
-    // 3. Itera sobre cada item da lista e adiciona um "ouvinte de evento"
+    // Função principal para atualizar o Player
+    const updateMainVideo = (link, title, channel, description) => {
+        if (mainPlayer) {
+            mainPlayer.src = link;
+        }
+        if (mainTitle) {
+            mainTitle.textContent = title;
+        }
+        if (mainChannel) {
+            mainChannel.textContent = channel;
+        }
+        if (mainDescription) {
+            mainDescription.textContent = description;
+        }
+        console.log(`[DEBUG] Player atualizado para: ${title} (${link})`); // Ajuda no diagnóstico
+    };
+
+    // Função para gerenciar a classe 'active'
+    const setActiveItem = (clickedItem) => {
+        videoItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        clickedItem.classList.add('active');
+    };
+
+    // 3. Adiciona o Listener de Clique para cada item
     videoItems.forEach(item => {
         item.addEventListener('click', () => {
             
-            // 4. Obtém os dados dos atributos 'data-'
-            const newLink = item.getAttribute('data-link');
-            const newTitle = item.getAttribute('data-title');
-            const newChannel = item.getAttribute('data-channel'); // NOVO DADO
-            const newDescription = item.getAttribute('data-desc');
+            // Extração concisa dos data-atributos
+            const { 
+                link, 
+                title, 
+                channel, 
+                desc: description // Renomeia 'desc' para 'description'
+            } = item.dataset;
 
-            // 5. Atualiza o atributo 'src' do iframe principal com o novo link
-            if (newLink) {
-                mainPlayer.src = newLink;
-                console.log('Vídeo carregado:', newTitle);
-            }
-            
-            // 6. Atualiza o TÍTULO, CANAL e DESCRIÇÃO do vídeo principal
-            if (newTitle) {
-                mainTitleElement.textContent = newTitle;
-            }
-            
-            if (newChannel) {
-                mainChannelElement.textContent = `Canal: ${newChannel}`;
-            } else {
-                mainChannelElement.textContent = ''; // Limpa se o dado estiver faltando
-            }
-            
-            if (newDescription) {
-                mainDescriptionElement.textContent = `Descrição: ${newDescription}`;
-            }
+            // 4. Atualiza o player principal
+            updateMainVideo(link, title, channel, description);
 
-            // Efeito visual para indicar qual item está selecionado
-            videoItems.forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
+            // 5. Atualiza a aparência do item ativo
+            setActiveItem(item);
         });
     });
 
-    // 7. Simula o clique no primeiro item ao carregar a página
+    // 6. Inicialização: Simula o clique no primeiro item para carregar o estado inicial
     if (videoItems.length > 0) {
+        // Dispara o evento de clique no primeiro item
         videoItems[0].click();
     }
 });
-
